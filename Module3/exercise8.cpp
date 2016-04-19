@@ -1,3 +1,4 @@
+/* using a interator, assign each element a value that is twice its current value*/
 #include <iostream>
 #include <string>
 #include <vector>

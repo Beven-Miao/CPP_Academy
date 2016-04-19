@@ -1,15 +1,16 @@
+/* Read the standrd input a line at a time, read a word at a time*/
 #include <iostream>
-using namespace std;
 
 int main()
 {
-	string s;
-	cout<<"input a line"<<endl;
-	getline(cin,s);
-	cout<<s<<endl;
-	
-	cout<<"input a word"<<endl;
-	cin>>s;
-	cout<<s<<endl;
-	return 0;
+    std::string s;
+    std::cout << "input a line" << std::endl;
+    getline(std::cin,s);
+
+    std::cout << s << std::endl;
+    std::cout << "input a word" << std::endl;
+    std::cin >> s;
+    
+    std::cout << s << std::endl;
+    return 0;
 }

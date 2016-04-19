@@ -1,28 +1,32 @@
+/* Calculate and print the sum od each pair of adjacent element in the vector 
+ * and output the odd number without summing it*/
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
 
 int main()
 {
-	vector<int> Container;
-	int ContainerSize;
-	int temp = 0;
+    std::vector<int> Container;
+    int ContainerSize;
+    int temp = 0;
 
-	cout<<"Please input ContainerSize"<<endl;
-	cin>>ContainerSize;  //input size of container
+    std::cout << "Please input ContainerSize" << std::endl;
+    std::cin >> ContainerSize;  //input size of container
 
-	for (int i = 0; i < ContainerSize; i++)
+    for (int i = 0; i < ContainerSize; i++)
+    {
+        std::cout << "Enter element " << i << std::endl;
+	std::cin >> temp;
+	Container.push_back(temp);
+    }
+
+    for(int i = 0; i < ContainerSize; i++)
+    {
+        if(i == ContainerSize-1)
 	{
-		cout<<"Enter element "<<i<<" :"<<endl;
-		cin>>temp;
-		Container.push_back(temp);
+	    std::cout << "odd number: ";
 	}
-
-	for(int i = 0; i < ContainerSize; i++){
-		if(i == ContainerSize-1)
-			cout<<"odd number: ";
-		cout<<Container[i]+Container[++i]<<endl;
+	std::cout << Container[i] + Container[++i] << std::endl;
     }
 	
     return 0;

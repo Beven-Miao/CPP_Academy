@@ -1,31 +1,34 @@
+/* Sum the first and last elements, followed by sum of second and second-to-last and so on */
 #include <iostream>
 #include <string>
 #include <vector>
-using namespace std;
 
 int main()
 {
-	vector<int> Container;
-	int ContainerSize;
-	int temp = 0;
+    std::vector<int> Container;
+    int ContainerSize;
+    int temp = 0;
 
-	cout<<"Please input ContainerSize"<<endl;
-	cin>>ContainerSize;  //input size of container
+    std::cout << "Please input ContainerSize" << std::endl;
+    std::cin >> ContainerSize;  //input size of container
 
-	for (int i = 0; i < ContainerSize; i++)
+    //input element to the vector
+    for (int i = 0; i < ContainerSize; i++)
+    {
+        std::cout << "Enter element " << i << std::endl;
+	std::cin >> temp;
+	Container.push_back(temp);
+    }
+   
+    //sum the elements
+    for(int i = 0; i < (ContainerSize+1)/2; i++)
+    {
+        if(i == ContainerSize/2 && ContainerSize%2 == 1)//wheather the element is the middle of vector
 	{
-		cout<<"Enter element "<<i<<" :"<<endl;
-		cin>>temp;
-		Container.push_back(temp);
+	    std::cout << "odd number: " << Container[i] << std::endl;
+	    return 0;
 	}
-
-	for(int i = 0; i < (ContainerSize+1)/2; i++){
-		if(i == ContainerSize/2 && ContainerSize%2 ==1)
-		{
-		cout<<"odd number: "<<Container[i]<<endl;
-		return 0;
-		}
-		cout<<"sum of "<<i<<" : "<<Container[i]+Container[ContainerSize-i-1]<<endl;
+        std::cout << "sum of " << i << " is: " << Container[i] + Container[ContainerSize-i-1] << std::endl;
     }
 	
     return 0;
