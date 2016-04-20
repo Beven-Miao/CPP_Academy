@@ -1,0 +1,13 @@
+#What, on your system, are the largest and the smallest values of the following types: char,short, int, long, float, double, long double, and unsigned.
+
+My system is 64bit
+
+char: -128 ~ 127
+short: -32768 ~ 32767
+int: -2^31 ~ 2^31-1
+long: -2^63 ~ 2^63-1
+float: 3.4*10^-38 ~ 3.4*10^38
+double: 1.7*10^-308 ~ 1.7*10^308
+long double: 1.7*10^-308 ~ 1.7*10^308
+unsigned: 0 ~ 2^32-1
+
