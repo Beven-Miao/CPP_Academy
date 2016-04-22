@@ -1,7 +1,6 @@
 #Use gdb to fix the program
 
-issues:   
-
+issues:
     1. in the line 63: 
        `head_ = new Node<T>(markar->value(), marker->next());`
        it should assign the next address to the head_,the error syntax will ganerate a new node and return a new address,but not the next address
